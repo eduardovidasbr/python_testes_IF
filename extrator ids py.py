@@ -14,7 +14,7 @@ def multi_thread(tempo):
             if '<a href=></a>' in resposta:
                 print ('Vazio {}'.format(tempo))
                 with open("contas.txt", 'a') as arquivo:
-                    arquivo.write(f'Id da URL é {tempo} \n')
+                    arquivo.write(f'Id da URL é https://paytrace.com/verify.pay?id={tempo}&mid=888000002887&img=5 \n')
 
 resultado = Parallel(n_jobs=2)(delayed(multi_thread)(tempo) for tempo in range(0,2000000))
 
